@@ -32,7 +32,7 @@ with st.sidebar:
     st.header("⚙️ Settings")
     api_key = st.text_input("Gemini API Key", value=get_api_key(), type="password",
                             help="Get a free key at aistudio.google.com/apikey. On the cloud, use Secrets instead.")
-    model = st.selectbox("Model", ["gemini-2.5-flash", "gemini-2.5-flash-lite"], index=0)
+      model = st.selectbox("Model", ["gemini-3.5-flash-lite", "gemini-3.5-flash"], index=0)
     st.caption("Free tier has rate limits; if you see a 429 error, wait a minute and retry.")
 
 # ---------- Header ----------
