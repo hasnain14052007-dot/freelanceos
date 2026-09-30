@@ -28,7 +28,7 @@ class FreelanceInput(BaseModel):
 SECTION_KEYS = ["lead_analysis", "proposal", "project_plan", "finance"]
 
 
-def run_freelance_crew(data: FreelanceInput, api_key: str, model: str = "gemini-2.5-flash") -> dict:
+def run_freelance_crew(data: FreelanceInput, api_key: str, model: str = "gemini-3.5-flash-lite") -> dict:
     """Run the full 4-agent workflow and return each agent's output as text."""
     llm = build_llm(api_key, model)
     agents = create_agents(llm)
