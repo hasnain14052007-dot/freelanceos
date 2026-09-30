@@ -8,7 +8,7 @@ Each agent has a role, a goal, and a backstory that shapes how the LLM behaves.
 from crewai import Agent, LLM
 
 
-def build_llm(api_key: str, model: str = "gemini-2.5-flash", temperature: float = 0.4) -> LLM:
+def build_llm(api_key: str, model: str = "gemini-3.5-flash-lite", temperature: float = 0.4) -> LLM:
     """Create the shared Google Gemini model used by all agents (free tier works)."""
     # The "gemini/" prefix tells CrewAI (via LiteLLM) to call Google's Gemini API.
     return LLM(model=f"gemini/{model}", api_key=api_key, temperature=temperature)
